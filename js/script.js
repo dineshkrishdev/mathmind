@@ -1,8 +1,8 @@
 var number_1 = 0;
 var number_2 = 0;
 
-let number_1_range = 10;
-let number_2_range = 10;
+let number_1_range = 5;
+let number_2_range = 15;
 
 var answer = document.getElementById("answer");
 var expected_answer = null;
@@ -74,10 +74,12 @@ function check() {
             .innerHTML = prepareQuestion();
         answer = document.getElementById("answer").value = "";
         score++;
+        correct();
     } else {
         document.getElementById("question")
             .innerHTML = prepareQuestion();
         answer = document.getElementById("answer").value = "";
+        wrong();
     }
     document.getElementById("result").innerHTML = score;
 }
@@ -129,6 +131,14 @@ answer.addEventListener("keydown", function (e) {
         check();
     }
 });
+
+function correct() { 
+    document.getElementById("correct_audio").play(); 
+} 
+
+function wrong() { 
+    document.getElementById("wrong_audio").play();
+} 
 
 $('body').notify({
 	message: 'Hello World',

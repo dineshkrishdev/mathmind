@@ -8,6 +8,14 @@
     </head>
     <body ng-app="">
         
+        <audio id="correct_audio">
+            <source src="asset/correct.mp3" type="audio/mpeg">
+        </audio>
+
+        <audio id="wrong_audio">
+            <source src="asset/wrong.mp3" type="audio/mpeg">
+        </audio>
+
         <nav class="navbar navbar-dark bg-dark">
             <a class="navbar-brand" href="#">MathMind</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,7 +27,7 @@
             <div class="row">
                 <div class="section_1 col-lg-3">
                     <h5>Range</h5><br>
-                    <div ng-init="number_1_range=10;number_2_range=10">
+                    <div ng-init="number_1_range=5;number_2_range=15">
                         <ul type="none">
                             <li>
                                 <input type="range" id="number_1_range" class="slider" min="1" max="100" step="1" onchange="setRange(this)" ng-model="number_1_range"/>
@@ -31,7 +39,7 @@
                             </li>
                         </ul>
                     </div>
-                    <h5>Operations</h5>
+                    <h5>Operations</h5><br>
                     <div>
                         <ul type="none">
                             <li>
@@ -85,4 +93,11 @@
     </body>
     <script src="js/angular.min.js"></script>
     <script src="js/script.js"></script>
+
+    <script>
+    
+        
+
+    </script>
+
 </html>
