@@ -75,6 +75,7 @@ function check() {
         answer = document.getElementById("answer").value = "";
         score++;
         correct();
+        ee();
     } else {
         document.getElementById("question")
             .innerHTML = prepareQuestion();
@@ -138,9 +139,4 @@ function correct() {
 
 function wrong() { 
     document.getElementById("wrong_audio").play();
-} 
-
-$('body').notify({
-	message: 'Hello World',
-	type: 'danger'
-});
+}
