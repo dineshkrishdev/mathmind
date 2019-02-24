@@ -79,6 +79,7 @@ function check() {
             .innerHTML = prepareQuestion();
         answer = document.getElementById("answer").value = "";
     }
+    document.getElementById("result").innerHTML = score;
 }
 
 function next() {

@@ -3,8 +3,25 @@ body {
 }
 
 #question {
-    font-size: 65px;
+    font-size: 100px;
     font-weight: bold;
+    width: 80%;
+}
+
+#answer {
+    width: 75%;
+    height: 75px;
+    font-size: 45px;
+    text-align: center;
+}
+
+.button {
+    width: 25%;
+}
+
+.score {
+
+    font-size: 40px;    
 }
 
 .slider {
@@ -39,16 +56,39 @@ body {
 }
 
 .section_1 {
-    border-top: yellow;
     background-color: #343a40;
     color: white;
-    padding: 50px;
+    padding: 25px;
+    height: 80%;
+    border: solid yellow;
 }
 
 .section_2 {
-
+    margin-top: 70px;
+    text-align: center;    
 }
 
 .section_3 {
-    
+    background-color: #343a40;
+    color: white;
+    padding: 25px;
+    text-align: center;
+    border: solid yellow;
+}
+
+.footer {
+    background-color: #343a40;
+    position: fixed;
+    height: 75px;
+    bottom: 0;
+    width: 100%;
+    color: white;
+}
+
+a {
+    color: yellow;
+}
+
+a:hover {
+    color: white;
 }
