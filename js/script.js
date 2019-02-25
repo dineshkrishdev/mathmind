@@ -8,6 +8,8 @@ var answer = document.getElementById("answer");
 var expected_answer = null;
 var score = 0;
 
+var isSoundOn = true;
+
 var operations = [
     {"name":"A", "status":true},
     {"name":"S", "status":false},
@@ -75,7 +77,6 @@ function check() {
         answer = document.getElementById("answer").value = "";
         score++;
         correct();
-        ee();
     } else {
         document.getElementById("question")
             .innerHTML = prepareQuestion();
@@ -133,10 +134,18 @@ answer.addEventListener("keydown", function (e) {
     }
 });
 
+function setSound(obj) {
+    isSoundOn = obj.checked;
+}
+ 
 function correct() { 
-    document.getElementById("correct_audio").play(); 
+    if(isSoundOn) {
+        document.getElementById("correct_audio").play(); 
+    }
 } 
 
 function wrong() { 
-    document.getElementById("wrong_audio").play();
+    if(isSoundOn) {
+        document.getElementById("wrong_audio").play();
+    }
 }
