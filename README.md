@@ -6,7 +6,7 @@ The **MathMind** is a free math practice tools for kids and it`s created and bei
 
 ## Screen shot 1
 
-![Image]()
+![Image](mathmind/asset/screen_shot/screen_shot_1.PNG)
 
 ## Screen shot 2
 
