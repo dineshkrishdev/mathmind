@@ -80,7 +80,7 @@
                         </li>
                         <li style="margin-top: 30px;">
                             <input type="button" class="button btn btn-success" value="Check" onclick="check()" />
-                            <input type="button" class="button btn btn-primary" value="Next" onclick="next()" />
+                            <input type="button" class="button btn btn-danger" value="Next" onclick="next()" />
                         </li>
                     </ul>
                     <div id="result_messaage"></div>
@@ -88,7 +88,9 @@
                 <div class="section_3 col-lg-3">
                     <div class="row">
                         <div class="col-lg-12 score">
-                            Your Score <br><span id="result">0</span>
+                            Your Score <br><span class="count" id="result">0</span>
+                            <span class="count">/</span>
+                            <span class="count" id="total">0</span>
                         </div>
                     </div>
                 </div>
@@ -97,7 +99,7 @@
 
         <footer class="footer">
             <div class="text-center" style="padding:25px;">
-                MathMind is created and being maintained by <a href="http://www.dineshkrish.com/" target="_blank">Dinesh Krishnan</a>
+                The <a href="#">MathMind</a> is created and being maintained by <a href="http://www.dineshkrish.com/" target="_blank">Dinesh Krishnan</a>
             </div>
         </footer>
     </body>
@@ -107,7 +109,7 @@
     <script src="js/script.js"></script>
 
     <script>
-
+        
     </script>
 
 </html>

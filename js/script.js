@@ -7,6 +7,7 @@ let number_2_range = 15;
 var answer = document.getElementById("answer");
 var expected_answer = null;
 var score = 0;
+var total = 0;
 
 var isSoundOn = true;
 
@@ -76,13 +77,16 @@ function check() {
             .innerHTML = prepareQuestion();
         answer = document.getElementById("answer").value = "";
         score++;
+        total++;
         correct();
     } else {
         document.getElementById("question")
             .innerHTML = prepareQuestion();
         answer = document.getElementById("answer").value = "";
         wrong();
+        total++;
     }
+    document.getElementById("total").innerHTML = total;
     document.getElementById("result").innerHTML = score;
 }
 
@@ -142,10 +146,19 @@ function correct() {
     if(isSoundOn) {
         document.getElementById("correct_audio").play(); 
     }
+    printResultMessage("Correct :(");
 } 
 
 function wrong() { 
     if(isSoundOn) {
         document.getElementById("wrong_audio").play();
     }
+    printResultMessage("Wrong :(");
+}
+
+function printResultMessage(message) {
+  var x = document.getElementById("result_messaage");
+  x.innerHTML = message;
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
 }
