@@ -21,6 +21,7 @@ var operations = [
 var activeOperation = null;
 
 var previous_questions = new Array();
+var histroy_data = new Array();
 
 document.getElementById("question")
     .innerHTML = prepareQuestion();
@@ -59,12 +60,11 @@ function prepareQuestion() {
             break;
     }
 
-    for(var i = 0; i < previous_questions.length; i++) {
-        if(previous_questions[i] == questionStr) {
-            prepareQuestion();
-        } else {
-            previous_questions.push(questionStr);
-        }
+    if(previous_questions.includes(questionStr)) {
+        prepareQuestion();
+    } else {
+        previous_questions.push(questionStr);
+        histroy_data.push(questionStr+" = "+expected_answer);
     }
 
     return questionStr;
@@ -88,6 +88,12 @@ function check() {
     }
     document.getElementById("total").innerHTML = total;
     document.getElementById("result").innerHTML = score;
+    
+    var data = "";
+    for(var i = 0; i < histroy_data.length - 1; i++) {
+        data = data + histroy_data[i] + "\n";
+    }
+    document.getElementById("history_result").value = data;
 }
 
 function next() {
