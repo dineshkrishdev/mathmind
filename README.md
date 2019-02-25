@@ -6,10 +6,10 @@ The **MathMind** is a free math practice tools for kids and it`s created and bei
 
 ## Screen shot 1
 
-![Image](mathmind/asset/screen_shot/screen_shot_1.PNG)
+![Image](https://raw.githubusercontent.com/idineshkrishnan/mathmind/master/asset/screen_shot/screen_shot_1.PNG)
 
 ## Screen shot 2
 
-![Image]()
+![Image](https://raw.githubusercontent.com/idineshkrishnan/mathmind/master/asset/screen_shot/screen_shot_2.PNG)
 
 
